@@ -17,3 +17,17 @@
 - HTTPs
 - Tree Shaking
 - Different dev and prod bundles
+
+
+# Namaste Food Delivery App
+ Food Delivery App
+ Header
+  - Logo
+  - Nav Items
+ 
+ Body
+  - Search
+  - Card Layout
+ 
+ Footer
+  - copyrights etc

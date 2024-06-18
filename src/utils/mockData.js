@@ -1,59 +1,3 @@
-import React from "react";
-import ReactDOM  from "react-dom/client";
-
-// Food Delivery App
-// Header
-//  - Logo
-//  - Nav Items
-// 
-// Body
-//  - Search
-//  - Card Layout
-// 
-// Footer
-//  - copyrights etc
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div>
-            <img
-             className="logo"
-             src="https://th.bing.com/th/id/OIP.ZK65XnPMQJYEQ-htwz4ARwHaHa?w=180&h=181&c=7&r=0&o=5&dpr=2&pid=1.7"
-             alt="food-app-logo"
-             />
-             </div>
-             <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>Cart</li>
-                    <li>Contact Us</li>
-                    <li>About Us</li>
-                </ul>
-             </div>
-
-        </div>
-    )
-}
-
-const RestroCard = ({resData}) => {
-    const { name, cloudinaryImageId, cuisines, costForTwo, avgRating, sla} = resData?.info;
-    return (
-        <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
-            <img 
-            className="res-logo"
-            src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} 
-            alt="Taaza Tindi"
-            />
-            <h3>{name}</h3>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4>{costForTwo}</h4>
-            <h4>{avgRating + "stars"}</h4>
-            <h4>{sla?.slaString}</h4> 
-        </div>
-    )
-}
-
 const resList = [
     {
         "info": {
@@ -1657,28 +1601,4 @@ const resList = [
     }
 ]
 
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">Search</div>
-            <div className="res-container">
-                {resList.map(restaurant => {
-                    return <RestroCard key={restaurant.info.id} resData={restaurant} />
-                })}
-            </div>
-        </div>
-    )
-} 
-
-const AppLayout = () => {
-    return (
-        <div className="app-layout">
-            <Header />
-            <Body />
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default resList;
