@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 
-export const RestaurantCard = ({resData}) => {
+const RestaurantCard = ({resData}) => {
     const { name, cloudinaryImageId, cuisines, costForTwo, avgRating, sla} = resData?.info;
     return (
         <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>

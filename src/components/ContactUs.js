@@ -1,7 +1,7 @@
 const ContactUs = () => {
     return (
         <h1>
-            This is contact us page
+            This is Contact Us page
         </h1>
     )
 }

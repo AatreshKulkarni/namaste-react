@@ -17,13 +17,13 @@ const Header = () => {
             <div className="nav-items">
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link className="link" to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link className="link" to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="/contact-us">Contact Us</Link>
+                        <Link className="link" to="/contact-us">ContactUs</Link>
                     </li>
                     <button className="login-btn" onClick={() => {
                         btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
